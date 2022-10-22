@@ -1,0 +1,100 @@
+body {
+    line-height: 1.4;
+    width: 95vw;
+    border: 7px rgba(247, 244, 244, 0.24) solid;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 15px;
+    margin: auto;
+    background-color: rgb(10, 6, 77);
+    text-align: center;
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+#a-sides{
+    text-decoration: underline;
+}
+#a-sides:hover{
+    color: #0d6efd;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a:hover{
+    color: rgb(190, 185, 185);
+}
+
+.bg-custom{
+    background-color: rgba(45, 92, 187, 0.205);
+    border: 1px rgba(255, 255, 255, 0.192) solid;
+}
+.bg-custom-two{
+    background: linear-gradient(45deg, rgba(70, 124, 204, 0.493), rgb(18, 4, 97));
+    border: 1.5px solid rgba(219, 163, 7, 0.356);
+    border-radius: 4px;
+}
+
+.bg-bar{
+    background-color: #fdb10d;
+}
+
+.fit-con{
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: fit-content;
+}
+
+.my-color{
+    color: rgb(243, 200, 6);
+}
+.my-badge{
+    color: white;
+    background-color: #0d6efd;
+    margin: auto;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+}
+
+.my-badge:hover{
+    color: rgb(243, 200, 6);
+
+}
+/* UTILITIES: */
+
+    /* search bar start */
+
+.form-control-borderless {
+    padding: 0;
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    padding: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+    /* search bar end */
+
+
+    /* placeholders */
+
+
+input,
+input::placeholder {
+    font: 15px/3 sans-serif;
+}
+    /* placeholders end */
+
+
+
+/* UTILITIES END */

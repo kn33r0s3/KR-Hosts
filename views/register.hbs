@@ -1,0 +1,91 @@
+<br>
+<br>
+      <div class="container col-lg-5 col-md-12 col-sm-10 mx-auto my-auto bg-custom-two p-4">
+        {{!-- <div class="container text-center m-3 text-light">Please fill out the form to sign up!</div> --}}
+
+        <!-- form card login -->
+        <div class="card rounded shadow shadow-sm bg-custom text-light">
+            <div class="card-header bg-bar d-flex flex-column align-items-center">
+                    
+
+                  <h5 id = "badge-form" class="mb-0 m-0 text-center text-dark">Registration</h5>
+            </div>
+
+            <div class="card-body">
+                <form action="/register" class="form text-center" style="font-size: 1em;" role="form" autocomplete="off" id="formRegister"  method="POST">
+
+                    {{#if nullErr}}
+                    <p class="mt-2 mb-1 my-color fw-bold">{{nullErr}}</p>
+                    {{/if}}
+
+                      {{#if Errs.nameErr}}
+                      <div><label for="uname1" class="mt-2 my-color fw-bold">{{Errs.nameErr}}</label></div>
+                      {{/if}}
+                  <div class="form-group">
+                      <label for="fname1" class="mt-1">First Name</label>
+                      <input type="text" class="form-control form-control-lg rounded-0" name="fname1" id="fname1" {{#if RegData.fname}} value="{{RegData.fname}}"{{/if}}>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="lname1" class="mt-2">Last Name</label>
+                      <input type="text" class="form-control form-control-lg rounded-0" name="lname1" id="lname1" {{#if RegData.lname}} value="{{RegData.lname}}"{{/if}}>
+                  </div>
+
+
+                    <div class="form-group">
+                        <label for="uname1" class="mt-2">Username</label>
+                        {{#if Errs.unameErr}}
+                      <div><label for="uname1" class="mt-2 my-color fw-bold">{{Errs.unameErr}}</label></div>
+                      {{/if}}
+                        <input type="text" class="form-control form-control-lg rounded-0" name="uname2" id="uname2" {{#if RegData.username}} value="{{RegData.username}}"{{/if}}>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="email" class="mt-2">Email</label>
+                      {{#if Errs.emailErr}}
+                      <div><label for="uname1" class="mt-2 my-color fw-bold">{{Errs.emailErr}}</label></div>
+                      {{/if}}
+                      <input type="text" class="form-control form-control-lg rounded-0" name="email1" id="email1" {{#if RegData.email}} value="{{RegData.email}}"{{/if}}>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="phone-num" class="mt-2">Phone Number</label>
+                      {{#if Errs.numErr}}
+                      <div><label for="uname1" class="mt-2 my-color fw-bold">{{Errs.numErr}}</label></div>
+                      {{/if}}
+                      <input type="text" class="form-control form-control-lg rounded-0" name="phonenum" id="phonenum" {{#if RegData.phone}} value="{{RegData.phone}}"{{/if}}>
+                  </div>
+
+                    <div class="form-group">
+                        <label class="mt-2">Password</label>
+                        {{#if Errs.passErr}}
+                      <div><label for="uname1" class="mt-2 my-color fw-bold">{{Errs.passErr}}</label></div>
+                      {{/if}}
+                        <input type="password" class="form-control form-control-lg rounded-0" name = "pwd2" id="pwd2" {{#if RegData.password}} value="{{RegData.password}}"{{/if}}>
+                    </div>
+
+
+
+                  <div class="form-group d-inline-flex justify-content-around mx-0 my-2">
+                <input class="form-check-input my-auto p-1 bg-dark" type="checkbox">
+                <label class="form-check-label small my-1 p-2">I agree to the website's terms and policies!</label>
+                  </div>
+                  <div><button type="submit" class="btn btn-primary btn-md mb-2" id="btnRegister">Sign Up</button></div>
+                </form>
+                <p class="small my-auto">Already a member? <a href="/login" class="my-color font-underline"><u>Login</u></a></p>
+
+            </div>
+            <!--/card-block-->
+
+        </div>
+
+
+        <!-- /form card login -->
+
+    </div>
+
+<br>
+<br>
+<br>
+<br>
+

@@ -1,0 +1,66 @@
+<br>
+<br>
+      <div class="container col-lg-5 col-md-12 col-sm-10 mx-auto my-auto bg-custom-two p-4">
+        <div class="text-center text-light m-3"><span class="fs-5 my-color">Welcome back!</span><br>Please fill out the form to login!</div>
+
+        <!-- form card login -->    
+        <div class="card rounded shadow shadow-sm bg-custom text-light">
+            <div class="card-header bg-bar d-flex flex-column align-items-center">
+                    
+
+                  <h5 id = "badge-form" class="mb-0 m-0 text-center text-dark">Login</h5>
+            </div>
+
+            <div class="card-body">
+                <form action="/login" class="form text-center" style="font-size: 1em;" role="form" autocomplete="off" id="formLogin" method="POST">
+
+                    {{#if ErrorMsg}}
+                    <p class="mt-2 mb-1 my-color fw-bold">{{ErrorMsg}}</p>
+                    {{/if}}
+
+                    <div class="form-group">
+                            <label for="uname1" class="mt-2">Username</label>
+
+                            {{#if UserErrorMsg}}
+                            <div><label for="uname1" class="mt-2 my-color fw-bold">{{UserErrorMsg}}</label></div>
+                            {{/if}}
+
+                        <input type="text" class="form-control form-control-lg rounded-0" name="uname1" id="uname1" {{#if UserName}} value="{{UserName}}"{{/if}}>
+                    </div>
+
+
+                    <div class="form-group">
+                            <label for="pwd1" class="mt-2">Password</label>
+
+                            {{#if PwdErrorMsg}}
+                            <div><label for="pwd1" class="mt-2 my-color fw-bold">{{PwdErrorMsg}}</label></div>
+                            
+                            {{/if}}
+                        <input type="password" class="form-control form-control-lg rounded-0" name="pwd1" id="pwd1" {{#if Password}} value="{{Password}}"{{/if}}>
+                    </div>
+
+                  <div class="form-group d-inline-flex justify-content-around mx-0 my-2">
+                <input class="form-check-input my-auto p-1 bg-dark" type="checkbox">
+                <label class="form-check-label small p-2">Remember me!</label>
+                  </div>
+                  
+                <div><button type="submit" class="btn btn-primary btn-md mb-2" id="btnLogin">Login</button></div>
+
+                </form>
+                <p class="small my-auto">Not a member yet? <a href="/register" class="my-color font-underline"><u>SignUp</u></a></p>
+
+            </div>
+            <!--/card-block-->
+
+        </div>
+
+
+        <!-- /form card login -->
+
+    </div>
+
+<br>
+<br>
+<br>
+<br>
+
